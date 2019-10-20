@@ -7,6 +7,7 @@ import sys
 import math
 import pickle
 import re
+import cv2
 
 class Classify():
     def __init__(self):
@@ -23,26 +24,19 @@ class Classify():
         with open(classifier_filename_exp, 'rb') as infile:
             (self.model, self.class_names) = pickle.load(infile)
 
-        print(self.class_names)
-
     def __del__(self):
         self.sess.close()
+
+    def get_class_names(self):
+        return self.class_names
 
     def predict(self, img):
         image = np.zeros((1, 160, 160, 3))
         image[0,:,:,:] = img
-        #image = self.load_image(path)
         self.feed_dict = { self.images_placeholder:image, self.phase_train_placeholder:False }
         self.emb_array[0,:] = self.sess.run(self.embeddings, feed_dict=self.feed_dict)
         predictions = self.model.predict_proba(self.emb_array)
-        #predictions = self.model.predict(self.emb_array)
-        best_class_indices = np.argmax(predictions, axis=1)
-        best_class_probabilities = predictions[np.arange(len(best_class_indices)), best_class_indices]
-        print(predictions)
-        if best_class_probabilities[0] < 0.7:
-            return "Unknown face"
-        else:
-            return self.class_names[best_class_indices[0]]
+        return predictions
 
     def prewhiten(self, x):
         mean = np.mean(x)
