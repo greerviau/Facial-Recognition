@@ -28,7 +28,7 @@ python3 facenet/src/align_dataset_mtcnn.py "path/to/faces" "path/to/aligned_face
 
 Once your images are aligned you need to train the SVC (Support Vector Classifer) on your dataset. Run:
 ```
-python3 facenet/src/classifier.py TRAIN "path/to/aligned_faces" "facenet/src/models/pretrained_model" "facenet/src/svc_classifer.pkl
+python3 facenet/src/classifier.py TRAIN "path/to/aligned_faces" "facenet/src/models/pretrained_model" "facenet/src/sv_classifer.pkl
 ```
 
 Now run ```test.py``` to test that it is working.
