@@ -26,6 +26,8 @@ python3 facenet/src/align_dataset_mtcnn.py "path/to/faces" "path/to/aligned_face
 * path/to/faces = path to the main folder where you saved your faces
 * path/to/aligned_faces = path to the folder to save your aligned faces
 
+Now download the pretrained weights [here](https://drive.google.com/file/d/0B5MzpY9kBtDVZ2RpVDYwWmxoSUk/edit) and extract them to facenet/models/pretrained_model
+
 Once your images are aligned you need to train the SVC (Support Vector Classifer) on your dataset. Run:
 ```
 python3 facenet/src/classifier.py TRAIN "path/to/aligned_faces" "facenet/src/models/pretrained_model" "facenet/src/sv_classifer.pkl
