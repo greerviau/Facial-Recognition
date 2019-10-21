@@ -53,3 +53,5 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 
+## References 
+* Pretrained facenet model https://github.com/davidsandberg/facenet/tree/096ed770f163957c1e56efa7feeb194773920f6e
