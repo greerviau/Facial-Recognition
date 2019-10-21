@@ -23,8 +23,8 @@ Next the images need to be aligned. Run:
 ```
 python3 facenet/src/align_dataset_mtcnn.py "path/to/faces" "path/to/aligned_faces" --image_size 160
 ```
-path/to/faces = path to the main folder where you saved your faces
-path/to/aligned_faces = path to the folder to save your aligned faces
+* path/to/faces = path to the main folder where you saved your faces
+* path/to/aligned_faces = path to the folder to save your aligned faces
 
 Once your images are aligned you need to train the SVC (Support Vector Classifer) on your dataset. Run:
 ```
