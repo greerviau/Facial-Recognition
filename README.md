@@ -37,8 +37,7 @@ Now run ```test.py``` to test that it is working.
 
 ## Pipeline
 To use this as a pipeline you will need to import ```facial_recognition.py```
-The facial recognition can be used by creating a FacialRecognition object an calling ```find_faces()```
-Follow the example bellow on how to call ```find_faces()```
+The facial recognition can be used by creating a FacialRecognition object an calling ```find_faces()``` as shown bellow.
 ```
 import cv2
 import facial_recognition as fr
