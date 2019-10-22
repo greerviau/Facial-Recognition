@@ -11,7 +11,7 @@ class FacialRecognition():
 
     def __init__(self):
 
-        self.CONF = 0.8
+        self.CONF = 0.7
 
         self.classifier = classify.Classify()
         self.preprocessor = preprocess.PreProcessor()
@@ -57,7 +57,7 @@ class FacialRecognition():
                 best_class_index = np.argmax(pred)
                 best_class_probability = pred[best_class_index]
                 
-                name = 'Unknown Face'
+                name = 'Unknown'
                 if best_class_probability > self.CONF:
                     name = self.class_names[best_class_index]
 

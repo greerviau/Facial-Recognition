@@ -20,7 +20,7 @@ class Classify():
         self.embedding_size = self.embeddings.get_shape()[1]
         self.emb_array = np.zeros((1, self.embedding_size))
 
-        classifier_filename_exp = os.path.expanduser("facenet/src/svm_classifier.pkl")
+        classifier_filename_exp = os.path.expanduser("facenet/src/sv_classifier.pkl")
         with open(classifier_filename_exp, 'rb') as infile:
             (self.model, self.class_names) = pickle.load(infile)
 
