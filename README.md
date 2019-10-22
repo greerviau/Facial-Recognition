@@ -25,19 +25,20 @@ Next the images need to be aligned. Run:
 ```
 python3 facenet/src/align_dataset_mtcnn.py "path/to/faces" "path/to/aligned_faces" --image_size 160
 ```
-* path/to/faces = path to the main folder where you saved your faces
+* path/to/faces = path to the main folder where you saved your folder seperated faces
 * path/to/aligned_faces = path to the folder to save your aligned faces
 
 Once your images are aligned you need to train the SVC (Support Vector Classifer) on your dataset. Run:
 ```
-python3 facenet/src/classifier.py TRAIN "path/to/aligned_faces" "facenet/src/models/pretrained_model" "facenet/src/sv_classifer.pkl
+python3 facenet/src/classifier.py TRAIN "path/to/aligned_faces" "facenet/src/models/pretrained_model" "facenet/src/sv_classifer.pkl"
 ```
 
 Now run ```test.py``` to test that it is working.
 
 ## Pipeline
 To use this as a pipeline you will need to import ```facial_recognition.py```
-Follow the example bellow
+The facial recognition can be used by creating a FacialRecognition object an calling ```find_faces()```
+Follow the example bellow on how to call ```find_faces()```
 ```
 import cv2
 import facial_recognition as fr
