@@ -56,4 +56,5 @@ cv2.destroyAllWindows()
 ```
 
 ## References 
-* Pretrained facenet model https://github.com/davidsandberg/facenet
+* Pretrained Facenet model https://github.com/davidsandberg/facenet
+* Implementing Facenet https://medium.com/@athul929/building-a-facial-recognition-system-with-facenet-b9c249c2388a
