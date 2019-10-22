@@ -13,10 +13,10 @@ Git clone and ```cd``` into the directory
 ```
 git clone https://github.com/greerviau/Facial-Recognition.git && cd Facial-Recognition
 ```
-
-## Usage
 Download the pretrained weights [here](https://drive.google.com/file/d/0B5MzpY9kBtDVZ2RpVDYwWmxoSUk/edit) and extract them to ```facenet/src/models/pretrained_model```
 
+
+## Usage
 First you have to collect images of the faces you want to detect.
 1. Run: ```collect_image.py``` and use it to take pictures of a subjects face.
    * Make sure you adjust the ```save_path``` variable for each subject so they are saved in individualy labeled folders that are contained within a main folder.
