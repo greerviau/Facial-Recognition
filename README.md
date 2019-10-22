@@ -13,6 +13,8 @@ git clone https://github.com/greerviau/Facial-Recognition.git && cd Facial-Recog
 ```
 
 ## Usage
+Download the pretrained weights [here](https://drive.google.com/file/d/0B5MzpY9kBtDVZ2RpVDYwWmxoSUk/edit) and extract them to ```facenet/models/pretrained_model```
+
 First you have to collect images of the faces you want to detect.
 1. Run: ```collect_image.py``` and use it to take pictures of a subjects face.
    * Make sure you adjust the ```save_path``` variable for each subject so they are saved in individualy labeled folders.
@@ -25,8 +27,6 @@ python3 facenet/src/align_dataset_mtcnn.py "path/to/faces" "path/to/aligned_face
 ```
 * path/to/faces = path to the main folder where you saved your faces
 * path/to/aligned_faces = path to the folder to save your aligned faces
-
-Now download the pretrained weights [here](https://drive.google.com/file/d/0B5MzpY9kBtDVZ2RpVDYwWmxoSUk/edit) and extract them to ```facenet/models/pretrained_model```
 
 Once your images are aligned you need to train the SVC (Support Vector Classifer) on your dataset. Run:
 ```
