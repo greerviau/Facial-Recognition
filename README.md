@@ -33,7 +33,7 @@ Once your images are aligned you need to train the SVC (Support Vector Classifer
 python3 facenet/src/classifier.py TRAIN "path/to/aligned_faces" "facenet/src/models/pretrained_model" "facenet/src/sv_classifer.pkl"
 ```
 
-Now run ```test.py``` to test that it is working.
+Finally run ```test.py``` to test that it is working.
 
 ## Pipeline
 To use this as a pipeline you will need to import ```facial_recognition.py```
