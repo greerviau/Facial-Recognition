@@ -4,7 +4,9 @@
 A Facial Recognition pipeline using a pretrained Tensorflow implementation of Facenet.
 This pipeline uses a Harr Cascade Classifier to first detect all the faces in a scene.
 It then runs each of the faces through Facenet which computes a 128 dimensional feature map for each face.
-Then an SVC (Support Vector Classifier) is used to classify the feature maps.
+Then an SVC (Support Vector Classifier) is used to predict a probability of the face belonging to each class.
+The class with the highest prediction confidence that is also at least 80% is determined to be the correct classification.
+If none of the predictions achieve 80% confidence then the face is classified as "Unknown".
 
 This project was made durring HackUMass 2019 as part of a security system my team and I were developing. This was my contribution.
 
