@@ -3,8 +3,8 @@
 ## Overview
 A Facial Recognition pipeline using a pretrained Tensorflow implementation of Facenet.
 This pipeline uses a Harr Cascade Classifier to first detect all the faces in a scene.
-It then runs each of those faces through Facenet which computes the feature map representation of each face.
-Then an SVC (Support Vector Classifier) is used to classify the 128 dimensional feature maps.
+It then runs each of those faces through Facenet which computes a 128 dimensional feature map of each face.
+Then an SVC (Support Vector Classifier) is used to classify the feature maps.
 
 This project was made durring HackUMass 2019 as part of a security system my team and I were developing. This was my contribution.
 
