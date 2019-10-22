@@ -46,9 +46,11 @@ The facial recognition can be used by creating a FacialRecognition object an cal
 import cv2
 import facial_recognition as fr
 
+fcrc = fr.FacialRecognition()
+
 image = cv2.imread('path/to/image')
 
-image, names, faces_frame = fr.find_faces(image, return_face_frame = True)
+image, names, faces_frame = fcrc.find_faces(image, return_face_frame = True)
 
 if faces_frame is not None:
 	cv2.imshow('Faces', faces_frame)
