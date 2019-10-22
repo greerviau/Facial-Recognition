@@ -44,13 +44,13 @@ To use this as a pipeline you will need to import ```facial_recognition.py```
 The facial recognition can be used by creating a FacialRecognition object an calling ```find_faces()``` as shown bellow.
 ```
 import cv2
-import facial_recognition as fr
+from facial_recognition import FacialRecognition
 
-fcrc = fr.FacialRecognition()
+fr = FacialRecognition()
 
 image = cv2.imread('path/to/image')
 
-image, names, faces_frame = fcrc.find_faces(image, return_face_frame = True)
+image, names, faces_frame = fr.find_faces(image, return_face_frame = True)
 
 if faces_frame is not None:
 	cv2.imshow('Faces', faces_frame)
