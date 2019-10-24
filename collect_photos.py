@@ -5,9 +5,9 @@ cap = cv2.VideoCapture(cv2.CAP_DSHOW)
 cap.set(3, 1280)
 cap.set(4, 720)
 
-subject = 'greer'
+subject = 'aria'
 save_path = 'valid/'+subject
-delay = 1
+delay = 0.2
 
 faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 if not os.path.exists(save_path):

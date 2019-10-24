@@ -61,6 +61,7 @@ def main(args):
 
                  
             paths, labels = facenet.get_image_paths_and_labels(dataset)
+            #print(paths, labels)
             
             print('Number of classes: %d' % len(dataset))
             print('Number of images: %d' % len(paths))
@@ -87,16 +88,7 @@ def main(args):
                 images = facenet.load_data(paths_batch, False, False, args.image_size, do_prewhiten=False)
                 feed_dict = { images_placeholder:images, phase_train_placeholder:False }
                 emb_array[start_index:end_index,:] = sess.run(embeddings, feed_dict=feed_dict)
-            '''
-            seed = 547
-
-            labels = np.array(labels)
-
-            np.random.seed(seed)
-            np.random.shuffle(emb_array)
-            np.random.seed(seed)
-            np.random.shuffle(labels)
-            '''
+            
             classifier_filename_exp = os.path.expanduser(args.classifier_filename)
 
             if (args.mode=='TRAIN'):

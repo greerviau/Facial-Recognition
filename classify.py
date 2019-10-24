@@ -23,6 +23,7 @@ class Classify():
         classifier_filename_exp = os.path.expanduser("facenet/src/sv_classifier.pkl")
         with open(classifier_filename_exp, 'rb') as infile:
             (self.model, self.class_names) = pickle.load(infile)
+        print(self.class_names)
 
     def __del__(self):
         self.sess.close()
