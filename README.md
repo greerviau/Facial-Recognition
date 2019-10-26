@@ -20,7 +20,7 @@ Download the pretrained weights [here](https://drive.google.com/file/d/0B5MzpY9k
 
 ## Usage
 First you have to collect images of the faces you want to detect.
-1. Run: ```collect_image.py <name-of-subject> <number-of-photos>``` and use it to take pictures of a subjects face.
+1. Run: ```collect_photos.py <name-of-subject> <number-of-photos>``` and use it to take pictures of a subjects face.
 2. Collect photos with different facial expressions and angles.
 3. Repeat this for all the subjects whos faces you want to detect.
 
